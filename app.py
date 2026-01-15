@@ -29,8 +29,9 @@ with st.sidebar:
     show_values = st.checkbox("Show revenue values on chart", value=True)
     color_scheme = st.radio(
         "Color Scheme:",
-        ["Professional Blues",
+        "Professional Blues",
         index==0
+    )
 
 
 # Dati consolidati Semiconduttori (Revenue 2025 in Billions USD)
