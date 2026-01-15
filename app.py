@@ -72,6 +72,7 @@ if color_scheme == "Professional Blues":
         'Memory': '#4292c6',
         'Foundry': '#9ebcda',
         'Equipment & IP': '#737373'
+    }
 # Creazione della Treemap
 fig = px.treemap(
     df_filtered,
