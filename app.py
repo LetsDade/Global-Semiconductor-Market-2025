@@ -66,7 +66,6 @@ fig = px.treemap(
     path=['Sector', 'Company'] if selected_sector == 'All Sectors' else ['Company'],
     values='Revenue_B',
     color='Sector',
-    color_discrete_map=color_map
 )
 
 # Layout responsive per Streamlit
@@ -118,39 +117,6 @@ fig.update_traces(
 # Mostra il grafico
 st.plotly_chart(fig, use_container_width=True)
 
-# Sezione con statistiche chiave
-st.divider()
-col1, col2, col3, col4 = st.columns(4)
-
-with col1:
-    st.metric(
-        label="💎 Top Company",
-        value="NVIDIA",
-        delta="$180B Revenue"
-    )
-
-with col2:
-    st.metric(
-        label="🏭 Top Foundry",
-        value="TSMC",
-        delta="$114B Revenue"
-    )
-
-with col3:
-    total_market = df['Revenue_B'].sum()
-    st.metric(
-        label="🌍 Total Market",
-        value=f"${total_market:.0f}B",
-        delta="2025 Estimate"
-    )
-
-with col4:
-    nvidia_share = (180 / total_market) * 100
-    st.metric(
-        label="📊 NVIDIA Share",
-        value=f"{nvidia_share:.1f}%",
-        delta="Market Leader"
-    )
 
 # Tabella dati interattiva
 st.divider()
