@@ -60,29 +60,6 @@ else:
     df_filtered = df.copy()
     chart_title = "<b>Global Semiconductor Market 2025</b><br><span style='font-size:16px'>Revenue breakdown by Sector and Key Players</span>"
 
-# Definisci color maps basati sulla scelta utente
-if color_scheme == "Professional Blues":
-    color_map = {
-        'Logic & AI Chips': '#084594',
-        'Memory': '#4292c6',
-        'Foundry': '#9ebcda',
-        'Equipment & IP': '#737373'
-    }
-elif color_scheme == "Vibrant":
-    color_map = {
-        'Logic & AI Chips': '#e41a1c',
-        'Memory': '#377eb8',
-        'Foundry': '#4daf4a',
-        'Equipment & IP': '#984ea3'
-    }
-else:  # Monochrome
-    color_map = {
-        'Logic & AI Chips': '#252525',
-        'Memory': '#636363',
-        'Foundry': '#969696',
-        'Equipment & IP': '#cccccc'
-    }
-
 # Creazione della Treemap
 fig = px.treemap(
     df_filtered,
