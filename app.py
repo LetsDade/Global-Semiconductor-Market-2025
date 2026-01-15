@@ -30,7 +30,7 @@ with st.sidebar:
     color_scheme = st.radio(
         "Color Scheme:",
         ["Professional Blues",
-        index=0
+        index==0
 
 
 # Dati consolidati Semiconduttori (Revenue 2025 in Billions USD)
