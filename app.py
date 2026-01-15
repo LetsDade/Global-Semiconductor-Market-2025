@@ -27,8 +27,6 @@ with st.sidebar:
     
     # Opzione per mostrare/nascondere valori
     show_values = st.checkbox("Show revenue values on chart", value=True)
-    
-    )
 
 # Dati consolidati Semiconduttori (Revenue 2025 in Billions USD)
 data = {
