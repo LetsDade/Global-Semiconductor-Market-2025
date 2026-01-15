@@ -27,6 +27,11 @@ with st.sidebar:
     
     # Opzione per mostrare/nascondere valori
     show_values = st.checkbox("Show revenue values on chart", value=True)
+    color_scheme = st.radio(
+        "Color Scheme:",
+        ["Professional Blues",
+        index=0
+
 
 # Dati consolidati Semiconduttori (Revenue 2025 in Billions USD)
 data = {
@@ -59,7 +64,13 @@ if selected_sector != 'All Sectors':
 else:
     df_filtered = df.copy()
     chart_title = "<b>Global Semiconductor Market 2025</b><br><span style='font-size:16px'>Revenue breakdown by Sector and Key Players</span>"
-
+    
+if color_scheme == "Professional Blues":
+    color_map = {
+        'Logic & AI Chips': '#084594',
+        'Memory': '#4292c6',
+        'Foundry': '#9ebcda',
+        'Equipment & IP': '#737373'
 # Creazione della Treemap
 fig = px.treemap(
     df_filtered,
