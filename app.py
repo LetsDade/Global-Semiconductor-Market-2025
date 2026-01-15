@@ -18,22 +18,6 @@ Hover over any rectangle to see detailed information. Click on sectors to zoom i
 
 # Sidebar con informazioni e filtri
 with st.sidebar:
-    st.header("📊 About This Visualization")
-    st.markdown("""
-    **Data Source:**
-    - WSTS Market Forecast 2025
-    - Deloitte Semiconductor Outlook 2025
-    - Company Financial Reports Q4 2025
-    
-    **Key Insights:**
-    - NVIDIA dominates Logic & AI with $180B
-    - TSMC leads foundry services at $114B
-    - Memory sector: $160B total revenue
-    - Total market: ~$700B
-    """)
-    
-    st.divider()
-    
     # Filtro interattivo per settori
     st.subheader("🎯 Filter by Sector")
     sectors = ['All Sectors', 'Logic & AI Chips', 'Memory', 'Foundry', 'Equipment & IP']
@@ -44,11 +28,6 @@ with st.sidebar:
     # Opzione per mostrare/nascondere valori
     show_values = st.checkbox("Show revenue values on chart", value=True)
     
-    # Opzione per la scala colori
-    color_scheme = st.radio(
-        "Color Scheme:",
-        ["Professional Blues", "Vibrant", "Monochrome"],
-        index=0
     )
 
 # Dati consolidati Semiconduttori (Revenue 2025 in Billions USD)
