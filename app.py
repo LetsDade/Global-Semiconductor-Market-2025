@@ -1,6 +1,6 @@
 import plotly.express as px
 import pandas as pd
-
+import streamlit
 # Dati consolidati Semiconduttori (Revenue 2025 in Billions USD)
 data = {
     'Sector': [
